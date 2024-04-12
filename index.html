@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 27.03</title>
+  <style>
+    .container {
+      height: 80vh;
+    }
+    .cabecalho {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      width: 100%;
+      height: 40px;
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+    }
+    .cabecalho h1 {
+      font-size: 12px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+    .cabecalho #imgcb1 {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .conteudo1 {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 70px;
+      background-color: white;
+    }
+
+    .conteudo1 #logoadidas {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: auto;
+      left: 30px;
+    }
+
+    .conteudo1 .icons {
+      display: flex;
+      position: absolute;
+      justify-content: right;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+      bottom: 10px;
+      gap:30px;
+      right: 70px;
+    }
+    .conteudo1 #user {
+      width: 25px;
+      height: 25px;
+
+    }
+    .conteudo1 #fav {
+      width: 25px;
+      height: 25px;
+
+    }
+    .conteudo1 #compras {
+      width: 25px;
+      height: 25px;
+
+    }
+    .conteudo1 .menu1 {
+      display: flex;
+      position: absolute;
+      justify-content: right;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      gap:30px;
+      right: 70px;
+    }
+    .conteudo1 .menu1 h1 {
+      font-size: 10px;
+      color: grey;
+      font-weight: normal;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .conteudo1 .menu2 {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      height: 100%;
+      gap:40px;
+      bottom: 10px;
+    }
+    .conteudo1 .menu2 #mulher, #homem, #infantil {
+      font-size: 12px;
+      color: black;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .conteudo1 .menu2 #esportes, #mundoad, #desc {
+      font-size: 12px;
+      color: black;
+      font-weight: normal;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .conteudo1 .menu2 #desc {
+      color: red;
+      font-weight: bold;
+    }
+    .conteudo1 .menu2 #caixa{
+      width:160px;
+      height: 25px;
+      background-color: rgb(232, 231, 231);
+      border:none;
+      align-items: center;
+      justify-content: right;
+    }
+    .conteudo1 .menu2 .lupa{
+      position: relative;
+      right: 30px;
+      top: 15px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+    }
+    .banner {
+      display: flex;
+      position: absolute;
+      top: 115px;
+      width: 100%;
+      height: 80%;
+      background-color: white;
+    }
+    .banner #bannerimg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+    }
+    .banner #msg1 {
+      font-size: 35px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      font-weight: bold;
+      left:70px;
+      position: absolute;
+      align-self: flex-end;
+      bottom: 150px;
+    }
+    .banner #msg2 {
+      font-size: 16px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      font-weight: normal;
+      left:70px;
+      position: absolute;
+      align-self: flex-end;
+      bottom: 120px;
+      width: 370px;
+    word-wrap: break-word;
+    }
+    .botao-comprar {
+      display: flex;
+      position: absolute;
+      align-self: flex-end;
+      width: 180px;
+      height: 50px;
+      left: 70px;
+      bottom: 55px;
+      padding: 5px 10px;
+      font-size: 18px;
+      font-weight: normal;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color: black;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      justify-content: left;
+      align-items: center;
+    }
+    .banner #sombra {
+      display:flex;
+    position: absolute;
+    align-self: flex-end;
+    width: 195px;
+    height: 50px;
+    left: 80px;
+    bottom: 30px;
+    background-color: none;
+    border: 1px solid white;
+  }
+  .botao-comprar #imgpont {
+    position: absolute;
+    right: 10px;
+    height: 25px;
+    width: 35px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cabecalho">
+      <img id="imgcb1" src="https://em-content.zobj.net/source/apple/81/fire_1f525.png">
+      <h1>O adiclub days acaba de começar</h1>
+      <img id="imgcb1" src="https://em-content.zobj.net/source/apple/81/fire_1f525.png">
+    </div>
+    <div class="conteudo1">
+      <img id="logoadidas" src="https://cdn-icons-png.flaticon.com/512/731/731962.png">
+      <div class="icons">
+        <img id="user" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2PdHUFMU2jQC7XTe3W8RVGyTLfo4Nuf10zCQBtEA_XA&s">
+        <img id="fav" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI3etebi9fZ82z624RwIUZAHWtV3fMuDlguAI8iAGtQg&s">
+        <img id="compras" src="https://cdn-icons-png.flaticon.com/512/3091/3091221.png">
+      </div>
+      <div class="menu1">
+        <h1 id="blog">blog</h1>
+        <h1 id="ajuda">ajuda</h1>
+        <h1 id="historico">histórico de pedidos</h1>
+        <h1 id="entre">entre para o clube</h1>
+      </div>
+        <div class="menu2">
+        <h1 id="mulher">MULHER</h1>
+        <h1 id="homem">HOMEM</h1>
+        <h1 id="infantil">INFANTIL</h1>
+        <h1 id="esportes">ESPORTES</h1>
+        <h1 id="mundoad">MUNDO ADIDAS</h1>
+        <h1 id="desc">ATÉ 70% OFF</h1>
+        <form action="/action_page.php">
+          <input id="caixa" type="text" placeholder="Procurar" name="pesquisa">
+          <img src="https://cdn-icons-png.flaticon.com/512/3183/3183361.png" class="lupa">
+      </div>
+      </div>
+  <div class="banner">
+    <img id="bannerimg" src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/ss24_football_br_flamengo_launch_mh_hp_d_54802aecdd.jpg">
+    <h1 id="msg1">NOVA CAMISA II</h1>
+    <h1 id="msg2">A nova camisa do flamengo não é para você tirar onda e cantar alto no Maraca</h1>
+    <h1 id="sombra"></h1>
+    <a href="https://store.botafogo.com.br/" class="botao-comprar">Compre a sua
+      <img id="imgpont"src="https://cdn-icons-png.flaticon.com/512/545/545682.png">
+    </a>
+  </div>
+</body>
+</html>
