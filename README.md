@@ -1,2 +1,2 @@
 # layout-site-adidas
-layout site adidas
+Projeto de Reconstrução - Layout Adidas
